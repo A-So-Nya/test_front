@@ -2,11 +2,14 @@
   "name": "mercedui-template",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://A-So-Nya.github.io/react-gh-pages",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
     "dev": "PORT=4000 webpack-dev-server --open",
-    "build": "webpack --env.production"
+    "build": "webpack --env.production",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +27,7 @@
     "@typescript-eslint/parser": "^5.38.1",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.2",
     "css-loader": "^4.2.2",
     "csv-loader": "^3.0.3",
     "eslint": "^8.0.1",
@@ -37,6 +41,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.1.0",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^4.4.1",
     "prettier": "^2.7.1",
     "sass": "^1.26.10",

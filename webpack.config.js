@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env) => {
     const { production } = env ? env : { production: false };
@@ -17,7 +18,7 @@ module.exports = (env) => {
         },
         output: {
             filename: 'bundle.js',
-            path: path.resolve(__dirname, 'dist'),
+            path: path.resolve(__dirname, 'build'),
         },
         module: {
             rules: [
@@ -86,10 +87,16 @@ module.exports = (env) => {
                 title: 'My React Project',
                 template: './src/index.html',
             }),
+            new CopyPlugin({
+                patterns: [
+                    {from: path.resolve('src', 'assets', 'fonts', 'Gilroy-Regular.ttf'), to: path.resolve('build')},
+                    {from: path.resolve('src', 'assets', 'fonts', 'Nekst-Black.ttf'), to: path.resolve('build')}
+                ]
+            })
         ],
         output: {
             filename: '[name].bundle.js',
-            path: path.resolve(__dirname, 'dist'),
+            path: path.resolve(__dirname, 'build'),
         },
         optimization: {
             splitChunks: {
