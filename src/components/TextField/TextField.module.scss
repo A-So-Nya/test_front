@@ -1,0 +1,63 @@
+.text {
+    &--type {
+      &--normal-900-34-31 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 31px;
+        line-height: 31px;
+      }
+      &--normal-900-22-20 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 20px;
+      }
+      &--normal-400-16-20 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      &--normal-400-14-19 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  
+  
+    // aligns
+    &--align {
+      &--left {
+        text-align: left;
+      }
+  
+      &--center {
+        text-align: center;
+      }
+  
+      &--right {
+        text-align: right;
+      }
+    }
+  
+    // colors
+    &--color {
+      &--black {
+        color: #111111;
+      }
+      &--grey {
+        color: #333333;
+      }
+      &--white {
+        color: #FFFFFF;
+      }
+      &--darkGrey {
+        color: #575757;
+      }
+      &--greyBlue {
+        color: #333E48;
+      }
+    }
+  }

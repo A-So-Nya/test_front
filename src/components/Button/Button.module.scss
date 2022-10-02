@@ -1,0 +1,39 @@
+@import '../../assets/constants.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #FF9514;
+  width: max-content;
+  height: max-content;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  font-family: 'Nekst-Black';
+  @media screen and #{$tabletWidth} {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &:hover:not(.loading) {
+    background-color: #111111;
+  }
+
+  &:active:not(.loading) {
+    background-color: #575757;
+  }
+
+  &[disabled] {
+    background-color: #FF9514;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+

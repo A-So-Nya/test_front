@@ -1,0 +1,139 @@
+@import './assets/constants.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 44px;
+  font-family: 'Gilroy';
+  @media screen and #{$tabletWidth} {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 64px;
+  }
+  @media screen and #{$smallScreenWidth} {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 100px;
+  }
+  @media screen and #{$desktopWidth} {
+    padding-left: 47px;
+    padding-right: 49px;
+    padding-top: 213px;
+  }
+  .title {
+    font-family: 'Nekst-Black';
+    margin-bottom: 32px;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 31px;
+    flex: 1 1 100%;
+    width: 100%;
+    color: #111;
+    @media screen and #{$tabletWidth} {
+      font-weight: 900;
+      font-size: 54px;
+      line-height: 49px;
+      margin-bottom: 44px;
+    }
+    @media screen and #{$desktopWidth} {
+      margin-bottom: 32px;
+      width: 800px;
+      align-self: flex-start;
+    }
+  }
+  .inputs{
+    flex: 1 1 100%;
+    width: 100%;
+    .inputBlock {
+      margin-bottom: 16px;
+      @media screen and #{$tabletWidth} {
+        margin-bottom: 37px;
+      }
+      @media screen and #{$desktopWidth} {
+        margin-bottom: 51px;
+      }
+      min-width: 0;
+      flex: 1;
+    }
+    @media screen and #{$desktopWidth} {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+  .outputsAndControl {
+    flex: 1 1 100%;
+    width: 100%;
+    @media screen and #{$desktopWidth} {
+      display: flex;
+      flex-direction: row;
+      gap: 230px;
+      height: 68px;
+      align-items: center;
+    }
+    .outputs{
+      color: #333333;
+      @media screen and #{$tabletWidth} {
+        display: flex;
+        flex-direction: row;
+        gap: 85px;
+      }
+      @media screen and #{$smallScreenWidth} {
+        gap: 201px;
+      }
+      @media screen and #{$desktopWidth} {
+        gap: 180px;
+        color: #575757;
+      }
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      .titleColumn {
+        margin-bottom: 2px;
+        @media screen and #{$tabletWidth} {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 8px;
+        }
+      }
+      .column_text {
+        font-family: 'Nekst-Black';
+        @media screen and #{$tabletWidth} {
+          font-weight: 900;
+          font-size: 54px;
+          line-height: 49px;
+        }
+      }
+      padding-bottom: 29px;
+      @media screen and #{$desktopWidth} {
+        padding-bottom: 0px;
+      }
+    }
+    margin-bottom: 3px;
+    @media screen and #{$tabletWidth} {
+      margin-bottom: 15px;
+    }
+    @media screen and #{$desktopWidth} {
+      margin-bottom: 0px;
+    }
+  }
+    .button {      
+      height: 60px;
+      width: 280px;
+      border: none;
+      outline: none;
+      @media screen and #{$tabletWidth} {
+        height: 68px;
+        width: 345px;
+      }
+      @media screen and #{$desktopWidth} {
+        width: 426px;
+      }
+    }
+  }
+}
